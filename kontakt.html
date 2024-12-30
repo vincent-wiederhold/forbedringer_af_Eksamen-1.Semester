@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kontakt</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="eksperimentationgennemgithub.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="main-nav">
+        <a href="visualwin.dk/forbedringer_af_Eksamen-1.Semester/index.html"><img src="./images/logohvid.svg" alt="logo"></a>
+        <ul>
+            <li>
+                <div id="dropdownknap"><a href="#">Menu<span class="arrow">&#x26DB;</span></a></div>
+                <ul class="submenu">
+                    <li>
+                    <a href="visualwin.dk/forbedringer_af_Eksamen-1.Semester/ommig.html">Om mig</a>
+                    </li>
+                    <li>
+                    <a href="visualwin.dk/forbedringer_af_Eksamen-1.Semester/projekter.html">Projekter</a>
+                    </li>
+                    <li>
+                    <a href="visualwin.dk/forbedringer_af_Eksamen-1.Semester/kontakt.html">Kontakt</a>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="divV"></div>
+    <h1 class="h1">Kontakt mig</h1>
+    <h3>så vi sammen kan sparke din drøm igang</h3>
+    
+    <div class="container">
+        <form> <!-- Der ville normalt sættes en action="kontakt.html" ind, men da vi ikke har lært at bruge Javascript endnu er dette ikke muligt-->
+            <label for="name">Navn</label>
+            <input type="text" id="fname" name="navn" placeholder="eks. Ole Olsen">
+            <label for="country">Emne</label>
+            <select id="country" name="kategorier">
+                <option value="hjemmeside design">Hjemmeside design</option>
+                <option value="photoshoot">Photoshoot</option>
+                <option value="andet">Andet</option>
+            </select>
+            <label for="subject">Besked</label>
+            <textarea id="subject" name="subject" placeholder="Skriv din tekst her." style="height:200px"></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+    <footer class="footer">
+        <div class="footer__indhold--left"><div class="p">Reventlowsvej 71 <i class="fas fa-map-pin"></i></div></div>
+        <div class="footer__indhold--center"><div class="p">28142748 <i class="fas fa-solid fa-phone"></i></div></div>
+        <div class="footer__indhold--right"><div class="p">visual@win.dk <i class="fas fa-solid fa-envelope"></i></div></div>
+    </footer>
+</body>
+</html>

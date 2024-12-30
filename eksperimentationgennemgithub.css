@@ -3,96 +3,598 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  }
+
+  /* Replace <uniquifier> and <weight> with appropriate values */
+  body{
+    font-family: "Open Sans", serif;
+    font-weight: 300; /* Replace with a value between 300 and 800 */
+    font-style: normal;
+    width: 100%;
+  }
+
+  /*
+  body{
+    font-family: 'open sans';
+    margin: 0;
+  }
+
+  a {
+    color: white;
+    font-weight: 300;
+    letter-spacing: 5px;
+    text-decoration: none;
+    background-color: rgb(0, 49, 95);
+    padding: 20px 15px;
+    display: inline-block;
+    width: 100%;
+    text-align:center
+  }
+
+  a:hover {
+    background: rgba(0,49,94,0.75);
+  }
+
+  .navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+  }
+  .navigation li {
+  flex-basis: 100%;
+  }
+  .navigation .user {
+    flex: 1;
+    flex-basis: 33%;
+  }
+
+  @media  screen and ( min-width: 750px ) {
+    .navigation ul {
+      flex-direction: row;
+    }
+  }
+  */
+  /* logo */
+  .logo {
+ 
+    .cls-2 {
+      font-family:"Open Sans", serif;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 700;
+    }
+
+    .cls-2, .cls-3 {
+      fill: #00315f;
+    }
+  }
+
+  .billede {
+    display: block;
+    margin: 50px auto 0px auto;
+    background-color: rgb(0, 49, 95);
+    width: 100%;
+  }
+  /* Menu opsætning */
+  #main-nav a {
+    color: rgb(255, 255, 255);
+    background: rgb(25, 69, 111);
+    height: 64px;
+    font-family: "Open Sans", serif;
+    font-size: 20px;
+    font-weight: 300; /* Replace with a value between 300 and 800 */
+    font-style: normal;
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: background 0,4s;
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+  
+  #main-nav ul {
+    width: 100%;
+    list-style: none;
+    border: none;
+    outline: none;
+    display: flex;
+  }
+
+  #main-nav li {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    border: none;
+    outline: none
+  }
+
+  #main-nav a img {
+    max-height: 50px; /* Set a max height for the logo */
+    width: auto; /* Allow the width to adjust proportionally */
 }
 
-/* Replace <uniquifier> and <weight> with appropriate values */
-body{
-  font-family: "Open Sans", serif;
-  font-weight: 300; /* Replace with a value between 300 and 800 */
-  font-style: normal;
+  .arrow {
+    border: rgb(255, 255, 255);
+    margin-left: 8px;
+    border-width: 0 3px 0 3px;
+    display: inline-block;
+    padding: 3px;
+  }
+
+  .submenu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: none;
+    outline: none;
+  }
+
+  .submenu li {
+    width: 100%;
+    top: 0px;
+    position: absolute;
+    display: none;
+    border: none;
+    outline: none;
+  }
+
+  .submenu li {
+    width: 100%;
+    position: relative;
+    border: none;
+    outline: none;
+  }
+
+   /*Hoover effects */
+  #main-nav a:hover{
+    color: rgb(0, 49, 95);
+    background: rgb(229, 234, 239);
+  }
+
+  #main-nav li:hover .submenu > li {
+    top: 0%;
+    display: block;
+    flex-direction: column;
+  }
+
+  .submenu li:hover .submenu-2 li {
+    display: block;
+  }
+
+   /*make it responsive*/
+  .respnsive {
+    max-width: 100%;
+    height: auto;
+    background-color: rgb(41, 175, 108);
+  }
+
+
+  /* Grundskabelon for cards */
+  .card {
+    background: rgb(0, 49, 95);
+    max-width: 450px;
+    height: 650px;
+    padding: 32px;
+    border: 10px solid rgb(0, 49, 95);
+    box-shadow: 0 3px 5px 0 rgb(0, 0, 0);
+    margin: 50px auto 50px auto;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Visuelle præsentation af projekt inde i card blokken */
+  .card__image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid rgb(255, 255, 255);
+  }
+  .card__image img {
+    max-width: 100%; /* Prevents the image from exceeding the container */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes inline spacing below the image */
+  }
+  .card__image--white {
+    max-width: 100%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+  }
+
+  .card__video {
+    width: auto;
+    height: auto;
+    border: 1px solid rgb(255, 255, 255);
+  }
+
+  .card__video video {
+    max-width: 100%; /* Prevents the video from exceeding the container width */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes inline spacing below the video */
+  }
+
+  .card__pdf {
+    display: inline-block; /* Ensures the border wraps around the PDF */
+    border: 1px solid rgb(255, 255, 255); /* Adds a yellow border */
+  }
+
+  .card__pdf iframe,
+  .card__pdf embed {
+    width: 100%; /* Makes the PDF scale with the container width */
+    height: auto; /* Adjusts height to maintain aspect ratio (if set correctly by the source) */
+    display: block; /* Removes inline spacing below the PDF */
+}
+  /* Overskriften i card blokken */
+  .card__heading {
+    color: rgb(255, 255, 255);
+    margin: 16px 0;
+  }
+
+  /* Brødtekst i card blokken */
+  .card__paragraph {
+    color: rgb(230,236,232);
+    font-family: "Open Sans", serif;
+    font-weight: 300; /* Replace with a value between 300 and 800 */
+    font-style: normal;
+    width: 100%;
+    margin: 32px 0px;
+  }
+
+  /* Knap mix blok (som kan genbruges hvor som helst) */
+  .button {
+    font-size: 20px;
+    border: 3px solid rgb(102, 131, 159);
+    box-shadow: 0 3px 5px 0;
+    padding: 5px 35px;
+  }
+
+  /* Knap element ( til ekstra justeringer der kun er gældene for kanpperne inde i card blokken)*/
+  .card__button {
+    margin-right: 20px;
+  }
+
+  /* Modificering af en primær knap inde i card blokken */
+  .card__button--primary {
+    background: rgb(127, 152, 175);
+    color: rgb(255, 255, 255);
+  }
+
+  /* Modificering af en sekundær knap inde i card blokken */
+  .card__button--secondary {
+    background: rgb(127, 152, 175);
+    color: rgb(255, 255, 255);
+  }
+
+  /* Animering */
+  .sprite {
+    width: 566.93px;
+    height: 566.93px;
+    background: url('animationworkshop.png') 0 0 no-repeat;
+    animation: play 4s steps(15) infinite;
+  }
+
+  /* Skriftstørrelser */
+  p {
+    color: rgb(0, 49, 95);
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:"width" 100;
+    text-align: center;
+    padding: 10px;
+  }
+  .p {
+    color: rgb(255, 255, 255);
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:"width" 100;
+    text-align: center;
+    padding: 10px;
+  }
+
+  h1 {
+    color: rgb(0, 49, 95);
+    font-family: "Open Sans", serif;
+    font-size: 65px;
+    font-weight: bold; /* Replace with a value between 300 and 800 */
+    font-style: normal;
+    align-content: center;
+    text-align: center;
+    width: 100%;
+    margin: 20px auto 20px auto;
+  }
+
+  h2 {
+    color: rgb(127, 152, 175);
+    font-family: "Open Sans", serif;
+    font-size: 40px;
+    font-weight: bold; /* Replace with a value between 300 and 800 */
+    font-style: normal;
+    text-align: center;
+    width: 100%;
+    margin: 20px auto 20px auto;
+  }
+
+  h3 {
+    color: rgb(0, 49, 95);
+    font-family: "Open Sans", serif;
+    font-size: 20px;
+    font-weight: bold; /* Replace with a value between 300 and 800 */
+    font-style: normal;
+    text-align: center;
+    width: 100%;
+    margin: 20px auto 20px auto;
+  }
+
+  @keyframes play {
+    0%{background-position: 0px;}
+    100%{background-position: -8503.95px;}
+  }
+
+
+  /* Kontaktformularen*/
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(0, 49, 95);
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    }
+    
+    input[type=submit] {
+    background-color: rgba(0, 49, 95);
+    color: rgb(255, 255, 255);
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+    background-color: rgba(0, 49, 95, 0.5);
+    }
+    
+    .container {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 25px 25px 25px;
+    }
+    
+  
+  .footer {
+  position: bottom;
+  left: 0;
+  bottom: 0;
   width: 100%;
-}
-
-/*
-body{
-  font-family: 'open sans';
-  margin: 0;
-}
-
-a {
-  color: white;
-  font-weight: 300;
-  letter-spacing: 5px;
-  text-decoration: none;
   background-color: rgb(0, 49, 95);
-  padding: 20px 15px;
-  display: inline-block;
-  width: 100%;
-  text-align:center
-}
-
-a:hover {
-  background: rgba(0,49,94,0.75);
-}
-
-.navigation ul {
-  list-style: none;
-  margin: 0;
-  padding: 0%;
+  color: rgb(255, 255, 255);
+  height: 20px;
   display: flex;
   flex-direction: column;
-}
-.navigation li {
-flex-basis: 100%;
-}
-.navigation .user {
-  flex: 1;
-  flex-basis: 33%;
-}
+  }
 
-@media  screen and ( min-width: 750px ) {
-  .navigation ul {
-    flex-direction: row;
-   }
-}
-*/
+  /*.footer__indhold--left
+  {
+    background: rgb(0, 49, 255);
+    color: rgb(255, 255, 255);
+    width: 25%;
+    height: auto;
+    margin-left: 100px;
+    padding: 10px;
+  }*/
+    .footer__indhold--left {
+    background: rgb(0, 49, 95);
+    color: rgb(255, 255, 255);
+    width: 100%; /* Use percentage for responsiveness */
+    max-width: auto; /* Optional: Limit the maximum width */
+    margin: auto; /* Center horizontally */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left; /* Center content horizontally */
+    align-items: left; /* Center content vertically */
+    text-align: left; /* Optional: Center text */
+    box-sizing: border-box; /* Ensure padding is included in the width/height */
+  }
 
-.h1 {
-  color: rgb(0, 49, 95);
-  font-family: "Open Sans", serif;
-  font-size: 65px;
-  font-weight: 300; /* Replace with a value between 300 and 800 */
-  font-style: normal;
-  text-align: center;
-  width: 100%;
-  margin: 20px auto 20px auto;
-}
+ /*.footer__indhold--center{
+    background: rgb(0, 49, 95);
+    color: rgb(255, 255, 255);
+    width: 25%;
+    height: auto;
+    margin-left: 400px;
+    margin-top: -62px;
+    padding: 10px;
+    align-items: center;
+  }*/
+  .footer__indhold--center {
+    background: rgb(0, 49, 95);
+    color: rgb(255, 255, 255);
+    width: 100%; /* Use percentage for responsiveness */
+    max-width: auto; /* Optional: Limit the maximum width */
+    margin:auto; /* Center horizontally */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Optional: Center text */
+    box-sizing: border-box; /* Ensure padding is included in the width/height */
+  }
+  .footer__indhold--right {
+    background: rgb(0, 49, 95);
+    color: rgb(255, 255, 255);
+    width: 100%;
+    max-width: auto;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: right; 
+    align-items: right;
+    text-align: right;
+    box-sizing: border-box;
+  }
 
-h2 {
-  color: rgb(127, 152, 175);
-  font-family: "Open Sans", serif;
-  font-size: 40px;
-  font-weight: 300; /* Replace with a value between 300 and 800 */
-  font-style: normal;
-  text-align: center;
-  width: 100%;
-  margin: 20px auto 20px auto;
-}
-
-h3 {
-  color: rgb(0, 49, 95);
-  font-family: "Open Sans", serif;
-  font-size: 20px;
-  font-weight: 300; /* Replace with a value between 300 and 800 */
-  font-style: normal;
-  text-align: center;
-  width: 100%;
-  margin: 20px auto 20px auto;
-}
-
-
+  /*.footer__indhold--right{
+    background: rgb(0, 255, 0);
+    color: rgb(255, 255, 255);
+    width: 25%;
+    height: auto;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    text-align: right;
+    margin-top: -62px;
+    box-sizing: border-box;
+    padding: 10px;
+  }*/
 
 @media screen and (min-width: 750px)
 {
+/*Skriftstørrelser*/
 
+  .h1 {
+    color: rgb(0, 49, 95);
+    font-family: "Open Sans", serif;
+    font-size: 100px;
+    font-weight: bold; /* Replace with a value between 300 and 800 */
+    font-style: normal;
+    text-align: center;
+    width: 100%;
+    margin: 20px auto 20px auto;
+  }
+
+  h2 {
+    color: rgb(127, 152, 175);
+    font-family: "Open Sans", serif;
+    font-size: 75px;
+    font-weight: bold; /* Replace with a value between 300 and 800 */
+    font-style: normal;
+    text-align: center;
+    width: 100%;
+    margin: 20px auto 20px auto;
+  }
+
+  h3 {
+    color: rgb(0, 49, 95);
+    font-family: "Open Sans", serif;
+    font-size: 50px;
+    font-weight: bold; /* Replace with a value between 300 and 800 */
+    font-style: normal;
+    text-align: center;
+    width: 100%;
+    margin: 20px auto 20px auto;
+  }
+
+  .billede {
+    display: block;
+    margin: 50px auto 0px auto;
+    background-color: rgb(20, 49, 95);
+    width: 752px;
+    height: 502;
+  }
+  .submenu {
+    display: block ;
+    flex-direction: row;
+    position: static;
+    height: 50px;
+  }
+
+  .navi {
+      background-color: rgb(0, 49, 95);
+  }
+
+  .navigation ul {
+      background-color: rgb(0, 49, 95);
+      flex-wrap: nowrap;
+  }
+
+  #dropdownknap {
+      display: none;
+  }
+
+  #main-nav li .submenu > li {
+    display: block;
+    flex-direction: column;
+    top: 0px;
+  }
+
+  .card__row {
+  background: rgb(0, 49, 95, 0.5);
+  width: 425px;
+  height: 570px;
+  border: 10px solid rgb(0, 49, 95);
+  box-shadow: 0 3px 5px 0 rgb(0, 0, 0);
+  padding: 32px;
+  display: flex;
+  flex-direction:row;
+  position: static;
+  }
+
+  .footer {
+    position: bottom;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(0, 49, 95);
+    color: rgb(255, 255, 255);
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer__indhold--left {
+    color: rgb(255, 255, 255);
+    width: 100%px; /* Use percentage for responsiveness */
+    max-width: auto; /* Optional: Limit the maximum width */
+    margin: auto; /* Center horizontally */
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    text-align: left; /* Optional: Center text */
+    box-sizing: border-box; /* Ensure padding is included in the width/height */
+  }
+
+  .footer__indhold--center {
+    color: rgb(255, 255, 255);
+    width: 100%; /* Use percentage for responsiveness */
+    max-width: 100%; /* Optional: Limit the maximum width */
+    margin: auto; /* Center horizontally */
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Optional: Center text */
+    box-sizing: border-box; /* Ensure padding is included in the width/height */
+  }
+
+  .footer__indhold--right {
+    color: rgb(255, 255, 255);
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right; 
+    align-items: right;
+    text-align: right;
+    box-sizing: border-box;
+  }
 }
